@@ -52,7 +52,7 @@ stock-analytics-api/
 │   ├── services/                   # Business logic layer
 │   │   ├── __init__.py
 │   │   ├── yahoo_client.py          # Yahoo Finance integration
-│   │   └── analytics.py             # SMA-based analysis logic
+│   │   └── analytics.py             # Analysis logic
 │   │
 │   ├── utils/                      # Utility helpers
 │   │   ├── __init__.py
@@ -68,11 +68,20 @@ stock-analytics-api/
 ├── static/                         # Frontend (served by FastAPI)
 │   └── index.html                  # Simple HTML frontend
 │
+├── docs/                           # Documentation assets
+│   └── diagrams/
+│       └── architecture.svg        # Project architecture diagram
+│
+├── .github/
+│   └── workflows/
+│       └── python.yml              # GitHub Actions CI (optional)
+│
 ├── requirements.txt                # Python dependencies
 ├── Dockerfile                      # Docker configuration
 ├── .env                            # Environment variables
 ├── .gitignore                      # Git ignored files
 ├── README.md                       # Project overview
+├── LICENSE                         # (Optional) License
 ```
 
 ---
