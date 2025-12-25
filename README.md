@@ -87,6 +87,7 @@ stock-analytics-api/
 ---
 
 ## Architecture
+[View Architecture Diagram](docs/diagrams/architecture.svg)
 ```
 +------------------+
 |   Web Browser    |
