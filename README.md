@@ -77,6 +77,58 @@ stock-analytics-api/
 
 ---
 
+## Architecture
+```
++------------------+
+|   Web Browser    |
+| (User / Client)  |
++------------------+
+          |
+          | HTTP Requests
+          v
++------------------+
+|  Frontend UI     |
+| static/index.html|
+| (Served by API)  |
++------------------+
+          |
+          | REST API Calls
+          v
++------------------------------+
+|        FastAPI App           |
+|        (app/main.py)         |
++------------------------------+
+   |        |        |        |
+   v        v        v        v
+Company   Market   History  Analysis
+API       API      API      API
+Routes    Routes   Routes   Routes
+(app/api/*)
+   |        |        |        |
+   +--------+--------+--------+
+            |
+            v
++------------------------------+
+|        Service Layer         |
+|  yahoo_client.py             |
+|  analytics.py                |
++------------------------------+
+            |
+            v
++------------------------------+
+|      Yahoo Finance API       |
+|        (yfinance)            |
++------------------------------+
+            |
+            v
++------------------------------+
+|   Data Processing Layer      |
+|  Pandas & NumPy              |
++------------------------------+
+```
+
+---
+
 ## Installation
 ```
 git clone https://github.com/SANJAI-s0/stock-analytics-api.git
